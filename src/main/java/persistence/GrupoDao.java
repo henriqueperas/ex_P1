@@ -42,7 +42,7 @@ public class GrupoDao implements IGrupoDao {
 		
 		Connection c = gDao.getConnection();
 		StringBuffer sql = new StringBuffer();
-		sql.append("SELECT * FROM grupos");
+		sql.append("SELECT g.codigoGrupo, t.nomeTime, t.cidade, t.estadio, g.grupo FROM grupos g, times t WHERE g.codigoTimeG = t.codigoTime");
 		
 		PreparedStatement ps = c.prepareStatement(sql.toString());
 
@@ -64,10 +64,10 @@ public class GrupoDao implements IGrupoDao {
 
 	@Override
 	public List<Grupo> listaGrupo(String letra) throws SQLException, ClassNotFoundException {
-List<Grupo> grupos = new ArrayList<Grupo>();
+		List<Grupo> grupos = new ArrayList<Grupo>();
 		
 		Connection c = gDao.getConnection();
-		String sql = "SELECT * FROM grupos WHERE grupo = ? ";
+		String sql = "SELECT g.codigoGrupo, t.nomeTime, t.cidade, t.estadio, g.grupo FROM grupos g, times t WHERE g.codigoTimeG = t.codigoTime AND g.grupo = ? ";
 		
 		PreparedStatement ps = c.prepareStatement(sql.toString());
 		ps.setString(1, letra);
