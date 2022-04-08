@@ -49,9 +49,9 @@
 				<tbody>	
 				<c:forEach items="${grupos}" var="grupo">
 					<tr>
-						<td align="center"><c:out value="${grupo.time.codTime}   "></c:out></td>
-						<td align="center"><c:out value="${grupo.time.nomeTime}  "></c:out></td>
-						<td align="center"><c:out value="${grupo.grupo}"></c:out></td>
+						<td align="center"><c:out value="${grupo.time.codTime }   "></c:out></td>
+						<td align="center"><c:out value="${grupo.time.nomeTime }  "></c:out></td>
+						<td align="center"><c:out value="${grupo.grupo }"></c:out></td>
 					</tr>
 				</c:forEach>
 				</tbody>
