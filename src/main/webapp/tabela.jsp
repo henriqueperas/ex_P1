@@ -12,7 +12,7 @@
 	<div align="center">
 	<nav id=menu>
 		<ul>
-			<li><a href="index.jsp">Início</a></li>
+			<li><a href="index.jsp">InÃ­cio</a></li>
 			<li><a href="grupos.jsp">Grupos</a><li>
 			<li><a href="jogos.jsp">Jogos</a></li>
 			<li><a href="tabela.jsp">Tabelas</a></li>
@@ -45,9 +45,9 @@
 					</tr>
 				</thead>
 				<tbody>	
-				<c:forEach items="${grupoA}" var="g">
+				<c:forEach items="${grupoA}" var="grupo">
 					<tr>
-						<td><c:out value="${g.time.nomeTime }"></c:out></td>
+						<td><c:out value="${grupo.time.nomeTime}"></c:out></td>
 					</tr>
 				</c:forEach>
 				</tbody>
@@ -61,9 +61,9 @@
 					</tr>
 				</thead>
 				<tbody>	
-				<c:forEach items="${grupoB}" var="g">
+				<c:forEach items="${grupoB}" var="grupo">
 					<tr>
-						<td><c:out value="${g.time.nomeTime }"></c:out></td>
+						<td><c:out value="${grupo.time.nomeTime}"></c:out></td>
 					</tr>
 				</c:forEach>
 				</tbody>
@@ -79,9 +79,9 @@
 					</tr>
 				</thead>
 				<tbody>	
-				<c:forEach items="${grupoC}" var="g">
+				<c:forEach items="${grupoC}" var="grupo">
 					<tr>
-						<td><c:out value="${g.time.nomeTime }"></c:out></td>
+						<td><c:out value="${grupo.time.nomeTime}"></c:out></td>
 					</tr>
 				</c:forEach>
 				</tbody>
@@ -95,9 +95,9 @@
 					</tr>
 				</thead>
 				<tbody>	
-				<c:forEach items="${grupoD}" var="g">
+				<c:forEach items="${grupoD}" var="grupo">
 					<tr>
-						<td><c:out value="${g.time.nomeTime }"></c:out></td>
+						<td><c:out value="${grupo.time.nomeTime}"></c:out></td>
 					</tr>
 				</c:forEach>
 				</tbody>
