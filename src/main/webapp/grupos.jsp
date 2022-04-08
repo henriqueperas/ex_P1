@@ -12,7 +12,7 @@
 		<div align="center">
 	<nav id=menu>
 		<ul>
-			<li><a href="index.jsp">Início</a></li>
+			<li><a href="index.jsp">InÃ­cio</a></li>
 			<li><a href="grupos.jsp">Grupos</a><li>
 			<li><a href="jogos.jsp">Jogos</a></li>
 			<li><a href="tabela.jsp">Tabelas</a></li>
@@ -27,7 +27,7 @@
 	</div>
 	<div align="center">
 		<form action="grupo" method="post">
-			<input type="submit" id=gerar_grupo name=gerar_grupo value="Gerar Grupos">
+			<input type="submit" id=separa_grupo name=separa_grupo value="Separa Grupos">
 		</form>
 	</div>
 	<div align="center">
@@ -37,7 +37,7 @@
 	</div>
 	<br />
 	<div align="center">
-		<c:if test="${not empty grupos }">
+		<c:if test="${not empty grupos}">
 			<table class=table_home>
 				<thead>
 					<tr>
@@ -47,11 +47,11 @@
 					</tr>
 				</thead>
 				<tbody>	
-				<c:forEach items="${grupos}" var="g">
+				<c:forEach items="${grupos}" var="grupo">
 					<tr>
-						<td align="center"><c:out value="${g.time.codTime }   "></c:out></td>
-						<td align="center"><c:out value="${g.time.nomeTime }  "></c:out></td>
-						<td align="center"><c:out value="${g.grupo }"></c:out></td>
+						<td align="center"><c:out value="${grupo.time.codTime}   "></c:out></td>
+						<td align="center"><c:out value="${grupo.time.nomeTime}  "></c:out></td>
+						<td align="center"><c:out value="${grupo.grupo}"></c:out></td>
 					</tr>
 				</c:forEach>
 				</tbody>
