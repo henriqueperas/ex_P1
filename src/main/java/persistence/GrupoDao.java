@@ -49,7 +49,7 @@ public class GrupoDao implements IGrupoDao {
 		ResultSet rs = ps.executeQuery();
 		while (rs.next()) {
 			Time t = new Time();
-			t.setNomeTime(rs.getString("time"));
+			t.setNomeTime(rs.getString("nomeTime"));
 			t.setCidade(rs.getString("cidade"));
 			t.setEstadio(rs.getString("estadio"));
 			
@@ -75,7 +75,7 @@ public class GrupoDao implements IGrupoDao {
 		ResultSet rs = ps.executeQuery();
 		while (rs.next()) {
 			Time t = new Time();
-			t.setNomeTime(rs.getString("time"));
+			t.setNomeTime(rs.getString("nomeTime"));
 			t.setCidade(rs.getString("cidade"));
 			t.setEstadio(rs.getString("estadio"));
 			
